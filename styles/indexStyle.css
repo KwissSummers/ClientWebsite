@@ -173,6 +173,7 @@ h6 {
 }
 
 .nav-tabs li a {
+  position: relative;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.05em;
@@ -183,31 +184,24 @@ h6 {
   padding: 0.4rem 0.9rem;
   transition: all 0.2s ease-in-out;
   display: inline-block;
+  text-align: center;
 }
 
+/* Underline on hover using border-bottom inside the tab */
 .nav-tabs li a:hover {
   background-color: #ffffff;
   color: #1a1a1a;
-  transform: scale(1.5);
+  transform: scale(1.1);
+  border-bottom: 3px solid #ffffff;
 }
 
-
-/* Optional: underline effect like a tab */
-.nav-tabs li a::after {
-  content: '';
-  display: block;
-  height: 2px;
+.nav-divider {
+  height: 3px;
   background-color: #ffffff;
-  width: 0%;
-  margin: 0 auto;
-  margin-top: 4px; /* adjust spacing under text */
-  transition: width 0.2s ease-in-out;
+  margin: 1rem auto;
+  max-width: 80%;
+  opacity: 0.8;
 }
-
-.nav-tabs li a:hover::after {
-  width: 100%;
-}
-
 
 
 /* === Footer Styling === */
