@@ -160,3 +160,45 @@ h6 {
   background-color: #3a3a3a;
   padding: 1rem;
 }
+
+/* === Navigation Tabs (between banner and intro) === */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0; /* space between banner and logo area */
+  gap: 2rem;
+}
+
+.nav-tabs li a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect: scale text slightly */
+.nav-tabs li a:hover {
+  transform: scale(1.15);
+}
+
+/* Optional: underline effect like a tab */
+.nav-tabs li a::after {
+  content: '';
+  display: block;
+  margin: 4px auto 0 auto;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  transition: width 0.2s ease;
+}
+
+.nav-tabs li a:hover::after {
+  width: 100%;
+}
+
