@@ -50,10 +50,11 @@ img {
 
 /* Make logo a bit bigger */
 .banner-logo {
-  width: 80px;
-  height: 80px;
+  width: 115px;
+  height: 115px;
   flex-shrink: 0;
 }
+
 
 /* Banner text block now centers tagline under title */
 .banner-text {
