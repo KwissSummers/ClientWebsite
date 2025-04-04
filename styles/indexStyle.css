@@ -30,9 +30,29 @@ img {
 }
 
 /* Title + Tagline */
+/* === Homepage Banner with Logo on Left === */
 .homepage-banner {
-  text-align: center;
-  margin-bottom: 2.5rem; /* Increased space below title/tagline */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #333;
+  border-bottom: 2px solid #ffffff;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.banner-logo {
+  width: 64px;
+  height: 64px;
+}
+
+.banner-text {
+  text-align: left;
 }
 
 .homepage-title {
@@ -44,6 +64,7 @@ img {
   font-size: 1.2rem;
   opacity: 0.8;
 }
+
 
 /* === Heading font family and uppercase === */
 h1, h2, h3, h4, h5, h6,
