@@ -14,29 +14,35 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <div class="homepage-container">
+  <main id="homepage-main">
+    <div class="homepage-container">
 
-    <section class="homepage-banner">
-      <div class="banner-inline">
-        <img src="images/sockenginelogo.png" alt="Ohm Desai Mascot Logo" class="banner-logo">
-        <div class="banner-text">
-          <div class="homepage-title">About</div>
-          <div class="homepage-tagline">Meet the Developer</div>
+      <!-- Banner -->
+      <section class="homepage-banner">
+        <div class="banner-inline">
+          <img src="images/sockenginelogo.png" alt="Ohm Desai Mascot Logo" class="banner-logo">
+          <div class="banner-text">
+            <div class="homepage-title">About</div>
+            <div class="homepage-tagline">Meet the Developer</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div data-include="components/header.html"></div>
+      <!-- Navigation Tabs -->
+      <div data-include="components/header.html"></div>
 
-    <main class="page-content">
-      <p>This is where the biography and background information will go.</p>
-    </main>
+      <!-- Main Page Content -->
+      <main class="page-content">
+        <p>This is where the biography and background information will go.</p>
+      </main>
 
-    <div data-include="components/footer.html"></div>
-  </div>
+      <!-- Footer -->
+      <div data-include="components/footer.html"></div>
+
+    </div>
+  </main>
 
   <script>HTMLInclude();</script>
 </body>
