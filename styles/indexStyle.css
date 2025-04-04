@@ -33,24 +33,29 @@ img {
 /* === Homepage Banner with Logo on Left === */
 .homepage-banner {
   padding: 2rem;
+  background-color: #333;
+  border-bottom: 2px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  border-bottom: 2px solid #ffffff;
 }
+
 
 .banner-inline {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  max-width: 1000px;
+  flex-wrap: nowrap;           /* ✅ prevents wrapping */
+  max-width: 1000px;           /* ✅ gives it a clean boundary */
+  margin: 0 auto;              /* ✅ centers it */
 }
 
 .banner-logo {
   width: 64px;
   height: 64px;
+  flex-shrink: 0;              /* ✅ prevents it from shrinking or pushing things weird */
 }
+
 
 .banner-text {
   display: flex;
