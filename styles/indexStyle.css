@@ -201,11 +201,13 @@ h6 {
 .nav-divider {
   height: 3px;
   background-color: #ffffff;
-  margin: 2rem auto 1rem auto;
+  margin: 2rem auto 1.5rem auto;
   width: 100%;
-  max-width: 960px; /*  match your main content width */
-  opacity: 0.8;
+  max-width: 100%;           /* take full width of parent */
+  padding: 0 2rem;            /* match horizontal padding of #homepage-main */
+  box-sizing: border-box;     /* include padding inside width */
 }
+
 
 
 /* === Footer Styling === */
