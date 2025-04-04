@@ -23,7 +23,6 @@
     height: auto;
   }
   
-  
   /* === Header (Nav Tabs) === */
   .nav-tabs {
     display: flex;
@@ -71,7 +70,6 @@
     box-sizing: border-box;
   }
   
-  
   /* === Footer Styling === */
   .site-footer {
     text-align: center;
@@ -93,7 +91,6 @@
     opacity: 1;
   }
   
-  
   /* === Heading Font Styles === */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
@@ -107,7 +104,6 @@
   h4 { font-size: 1.5rem; }
   h5 { font-size: 1.25rem; }
   h6 { font-size: 1rem; }
-  
   
   /* === Homepage Banner (Logo + Title + Tagline) === */
   .homepage-banner {
@@ -138,6 +134,14 @@
     justify-content: center;
   }
   
+  /* === Container Wrapper === */
+  .homepage-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* === Homepage Title and Tagline === */
   .homepage-title {
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
@@ -151,8 +155,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     opacity: 0.8;
-    text-align: center;
-    width: 100%;
     margin-top: 0.5rem;
   }
+  
   
