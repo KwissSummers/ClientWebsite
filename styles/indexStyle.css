@@ -202,3 +202,24 @@ h6 {
   width: 100%;
 }
 
+
+/* === Footer Styling === */
+.site-footer {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.75rem; /* small and subtle */
+  letter-spacing: 0.05em;
+  opacity: 0.6; /* makes it visually less dominant */
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-footer a:hover {
+  opacity: 1;
+}
