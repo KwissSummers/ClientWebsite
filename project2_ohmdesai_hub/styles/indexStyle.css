@@ -1,0 +1,162 @@
+/* ===== Global Font Setup ===== */
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Homepage Styles ===== */
+
+/* ===== Main Content Area ===== */
+#homepage-main {
+  max-width: 960px; /* Fixed width similar to itch.io's content area */
+  margin: 0 auto;   /* Center the content area */
+  padding: 2rem;    /* Consistent padding around content */
+  background-color: #1a1a1a; /* Match the body's background color */
+}
+
+/* Title + Tagline */
+.homepage-banner {
+  text-align: center;
+  margin-bottom: 2.5rem; /* Increased space below title/tagline */
+}
+
+.homepage-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.homepage-tagline {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* === Heading font family and uppercase === */
+h1, h2, h3, h4, h5, h6,
+.homepage-title,
+.homepage-tagline {
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === Header font sizes === */
+/* Main page title - 50% larger than h2 */
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* === Logo + Intro Flex Grid === */
+.homepage-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.homepage-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a; /* matches body */
+}
+
+.homepage-logo img {
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+}
+
+.homepage-description {
+  flex: 2;
+  background-color: #3a3a3a;
+  padding: 1rem;
+  min-height: 210px; /* Match engine logo height */
+  display: flex;
+  align-items: center; /* Optional: vertical centering */
+  justify-content: center; /* Optional: horizontal centering */
+  text-align: center;
+}
+
+
+/* === Social Media Icons === */
+.homepage-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.homepage-socials img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.homepage-socials img:hover {
+  transform: scale(1.1);
+}
+
+/* === Blog Section === */
+.homepage-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.homepage-posts {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.homepage-post {
+  background-color: #3a3a3a;
+  padding: 1rem;
+}
+
+.homepage-sidepanel {
+  flex: 1;
+  background-color: #3a3a3a;
+  padding: 1rem;
+}
