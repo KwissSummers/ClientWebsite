@@ -181,20 +181,22 @@ h6 {
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 6px;
-  padding: 0.4rem 0.9rem;
-  width: 120px; /* Fixed width for tabs */
-  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 0;
+  width: 120px;
+  height: 40px; /* ✅ fixed height */
+  line-height: 40px; /* ✅ centers text vertically */
   display: inline-block;
   text-align: center;
+  transition: transform 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
-/* Underline on hover using border-bottom inside the tab */
 .nav-tabs li a:hover {
   background-color: #ffffff;
   color: #1a1a1a;
-  transform: scale(1.1);
-  border-bottom: 3px solid #ffffff;
+  transform: scale(1.1); /* ✅ enlarges visually without taking up space */
 }
+
 
 .nav-divider {
   height: 3px;
@@ -204,7 +206,6 @@ h6 {
   max-width: 960px; /*  match your main content width */
   opacity: 0.8;
 }
-
 
 
 /* === Footer Styling === */
