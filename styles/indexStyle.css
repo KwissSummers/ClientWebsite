@@ -173,7 +173,6 @@ h6 {
 }
 
 .nav-tabs li a {
-  position: relative;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.05em;
@@ -181,15 +180,17 @@ h6 {
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 6px;
-  padding: 0.5rem 0;
   width: 120px;
-  height: 40px; /* ✅ fixed height */
-  line-height: 40px; /* ✅ centers text vertically */
-  display: inline-block;
+  height: 42px;
+  display: flex; /* Flex to center content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
   text-align: center;
   transition: transform 0.2s ease-in-out;
   box-sizing: border-box;
+  padding: 0; /* remove padding so flex handles centering */
 }
+
 
 .nav-tabs li a:hover {
   background-color: #ffffff;
