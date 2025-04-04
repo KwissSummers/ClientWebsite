@@ -1,126 +1,11 @@
-/* ===== Global Font Setup ===== */
-body {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
+/* === Homepage Content Only === */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ===== Homepage Styles ===== */
-
-/* ===== Main Content Area ===== */
+/* Container wrapper */
 #homepage-main {
-  max-width: 960px; /* Fixed width similar to itch.io's content area */
-  margin: 0 auto;   /* Center the content area */
-  padding: 2rem;    /* Consistent padding around content */
-  background-color: #1a1a1a; /* Match the body's background color */
-}
-
-/* Title + Tagline */
-/* === Homepage Banner with Logo on Left === */
-/* === Homepage Banner Area === */
-.homepage-banner {
-  padding: 2rem;
-  background-color: #1a1a1a;   /* Match page background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-inline {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Make logo a bit bigger */
-.banner-logo {
-  width: 115px;
-  height: 115px;
-  flex-shrink: 0;
-}
-
-
-/* Banner text block now centers tagline under title */
-.banner-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Start by default */
-}
-
-.homepage-title {
-  font-size: 3rem;
-  font-family: 'Bebas Neue', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Center tagline under title */
-.homepage-tagline {
-  font-size: 1.2rem;
-  font-family: 'Bebas Neue', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.8;
-  text-align: center;
-  width: 100%; /* Ensures it spans beneath title */
-  margin-top: 0.5rem;
-}
-
-
-
-
-/* === Heading font family and uppercase === */
-h1, h2, h3, h4, h5, h6,
-.homepage-title,
-.homepage-tagline {
-  font-family: 'Bebas Neue', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* === Header font sizes === */
-/* Main page title - 50% larger than h2 */
-h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 /* === Logo + Intro Flex Grid === */
@@ -136,26 +21,25 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a1a1a; /* matches body */
+  background-color: #1a1a1a;
 }
 
 .homepage-logo img {
   width: 100%;
-  max-width: 210px;
+  max-width: 300px;
   height: auto;
 }
 
 .homepage-description {
   flex: 2;
-  background-color: #3a3a3a;
+  background-color: #2e2e2e;
   padding: 1rem;
-  min-height: 210px; /* Match engine logo height */
+  min-height: 210px;
   display: flex;
-  align-items: center; /* Optional: vertical centering */
-  justify-content: center; /* Optional: horizontal centering */
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-
 
 /* === Social Media Icons === */
 .homepage-socials {
@@ -177,7 +61,7 @@ h6 {
   transform: scale(1.1);
 }
 
-/* === Blog Section === */
+/* === Content + Posts === */
 .homepage-content {
   display: flex;
   gap: 2rem;
@@ -191,83 +75,17 @@ h6 {
 }
 
 .homepage-post {
-  background-color: #3a3a3a;
+  background-color: #2e2e2e;
   padding: 1rem;
 }
 
 .homepage-sidepanel {
   flex: 1;
-  background-color: #3a3a3a;
+  background-color: #2e2e2e;
   padding: 1rem;
-}
-
-/* === Nav Tabs (between banner and content) === */
-.nav-tabs {
+  min-height: 210px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 1.5rem 0;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-.nav-tabs li a {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
-  width: 120px;
-  height: 42px;
-  display: flex; /* Flex to center content */
-  align-items: center; /* Vertically center */
-  justify-content: center; /* Horizontally center */
   text-align: center;
-  transition: transform 0.2s ease-in-out;
-  box-sizing: border-box;
-  padding: 0; /* remove padding so flex handles centering */
-}
-
-
-.nav-tabs li a:hover {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  transform: scale(1.1); /* ✅ enlarges visually without taking up space */
-}
-
-
-.nav-divider {
-  height: 3px;
-  background-color: #ffffff;
-  margin: 2rem auto 1.5rem auto;
-  width: 100%;
-  max-width: 100%;           /* take full width of parent */
-  padding: 0 2rem;            /* match horizontal padding of #homepage-main */
-  box-sizing: border-box;     /* include padding inside width */
-}
-
-
-
-/* === Footer Styling === */
-.site-footer {
-  text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.75rem; /* small and subtle */
-  letter-spacing: 0.05em;
-  opacity: 0.6; /* makes it visually less dominant */
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
-
-.site-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.site-footer a:hover {
-  opacity: 1;
 }
