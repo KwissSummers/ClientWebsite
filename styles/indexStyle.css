@@ -26,9 +26,11 @@
 
 .homepage-logo img {
   width: 100%;
-  max-width: 300px;
+  max-width: 210px;
+  max-height: 210px;
   height: auto;
 }
+
 
 .homepage-description {
   flex: 2;

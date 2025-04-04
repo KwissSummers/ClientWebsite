@@ -135,10 +135,13 @@
   }
   
   /* === Container Wrapper === */
+  /* === Reusable Page Container === */
   .homepage-container {
+    min-width: 960px;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
+    background-color: red;
   }
   
   /* === Homepage Title and Tagline === */
@@ -157,5 +160,8 @@
     opacity: 0.8;
     margin-top: 0.5rem;
   }
+
+  
+  
   
   
