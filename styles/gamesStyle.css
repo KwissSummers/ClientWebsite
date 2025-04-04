@@ -1,12 +1,13 @@
 
   /* === Games Gallery === */
-.games-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
+  .games-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start; /* changed from center */
+    margin-top: 2rem;
+  }
+  
 
 .game-card {
   background-color: #2e2e2e;
