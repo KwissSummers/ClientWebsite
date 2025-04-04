@@ -63,3 +63,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function fetchRecentDevLogs() {
+  fetch("devlog.html")
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const posts = doc.querySelectorAll(".devlog-post");
+      const container = document.getElementById("recent-devlogs");
+
+      // Take the first 2 posts
+      posts.forEach((post, i) => {
+        if (i > 1) return;
+
+        const id = post.id;
+        const title = post.querySelector("h2")?.textContent.trim();
+        const date = post.querySelector(".devlog-date")?.textContent.trim();
+        const excerpt = post.querySelector(".devlog-excerpt")?.textContent.trim();
+
+        const article = document.createElement("article");
+        article.className = "homepage-post";
+        article.innerHTML = `
+          <h3><a href="devlog.html#${id}">${title}</a></h3>
+          <p>${excerpt}</p>
+        `;
+
+        container.appendChild(article);
+      });
+    })
+    .catch(err => console.error("Failed to load recent dev logs:", err));
+}
+
+document.addEventListener("DOMContentLoaded", fetchRecentDevLogs);
