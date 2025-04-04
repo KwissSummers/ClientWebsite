@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +11,13 @@
 
   <script src="scripts/HTMLInclude.min.js"></script>
   <script src="scripts/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <main id="homepage-main">
     <div class="homepage-container">
@@ -33,17 +36,68 @@
       <!-- Navigation Tabs -->
       <div data-include="components/header.html"></div>
 
-      <!-- Main Page Content -->
-      <main class="page-content">
-        <p>This is where the expandable blog posts will go.</p>
-      </main>
+      <!-- Dev Log + Sidebar Layout -->
+      <section class="devlog-layout">
+        <!-- Blog Posts -->
+        <div class="devlog-posts">
+          <article class="devlog-post" id="april">
+            <h2>April Update – First Playtest Complete</h2>
+            <p class="devlog-date">Posted: April 1, 2025</p>
+            <p class="devlog-excerpt">
+              We wrapped up our first external playtest and got great feedback! Most players enjoyed the puzzle flow, though UI clarity was a big concern. Here’s what we learned.
+            </p>
+            <button class="devlog-toggle">Read More</button>
+            <div class="devlog-full" hidden>
+              <p>Full post content goes here... You’ll add long-form updates here that expand when toggled.</p>
+            </div>
+          </article>
 
-      <!-- Footer -->
-      <div data-include="components/footer.html"></div>
+          <article class="devlog-post" id="march">
+            <h2>March Recap – New Environment Art</h2>
+            <p class="devlog-date">Posted: March 20, 2025</p>
+            <p class="devlog-excerpt">
+              The desert biome is now fully implemented! You can traverse sandstorms, uncover ruins, and avoid heatstroke mechanics. More polish is incoming.
+            </p>
+            <button class="devlog-toggle">Read More</button>
+            <div class="devlog-full" hidden>
+              <p>More long-form content here, optionally expandable.</p>
+            </div>
+          </article>
 
-    </div>
+          <article class="devlog-post" id="may">
+            <h2>May Mushrooms – New Hippie Art</h2>
+            <p class="devlog-date">Posted: May 42, 2025</p>
+            <p class="devlog-excerpt">
+              I eat mushrooms and I make art. I made some mushrooms and now they are in the game. They are very cool and I like them a lot. You should check them out.
+            </p>
+            <button class="devlog-toggle">Read More</button>
+            <div class="devlog-full" hidden>
+              <p>More long-form content here, optionally expandable.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="devlog-sidebar">
+          <h3>Jump To</h3>
+          <ul>
+            <li><a href="#april">April Update</a></li>
+            <li><a href="#march">March Recap</a></li>
+            <li><a href="#may">May Mushrooms</a></li>
+          </ul>
+        </aside>
+      </section>
+
+    </div> <!-- end container -->
   </main>
 
-  <script>HTMLInclude();</script>
+  <!-- Dynamically include footer -->
+  <div data-include="components/footer.html"></div>
+
+  <!-- Enable dynamic includes -->
+  <script>
+    HTMLInclude();
+  </script>
+
 </body>
 </html>

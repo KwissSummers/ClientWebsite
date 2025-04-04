@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ohm Desai's Indie Game Hub | Games</title>
 
-  <link rel="stylesheet" href="styles/universalStyle.css" />
-  <link rel="stylesheet" href="styles/gamesStyle.css" />
+  <link rel="stylesheet" href="styles/gamesStyle.css">
+  <link rel="stylesheet" href="styles/universalStyle.css">
 
   <script src="scripts/HTMLInclude.min.js"></script>
   <script src="scripts/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <main id="homepage-main">
-    <div class="homepage-container">
-      
+    <div class="homepage-container"> <!-- added container -->
+
       <!-- Banner -->
       <section class="homepage-banner">
         <div class="banner-inline">
@@ -30,21 +34,50 @@
         </div>
       </section>
 
-      <!-- Header -->
+      <!-- Dynamically include header -->
       <div data-include="components/header.html"></div>
 
-      <!-- Main Page Content -->
-      <main class="page-content">
-        <p>This is where the game galleries will go.</p>
-      </main>
+      <!-- Game Gallery Section -->
+      <section class="games-gallery">
+        <div class="game-card">
+          <h3>Crystal Caverns</h3>
+          <img src="images/sockjamcover.png" alt="Ohm Desai Mascot Logo">
+          <p>description</p>
+          <a href="#" class="game-button">Play Now</a>
+        </div>
 
-      <!-- Footer -->
-      <div data-include="components/footer.html"></div>
+        <div class="game-card">
+          <h3>Frogtown Tycoon</h3>
+          <img src="images/sockjamcover.png" alt="Ohm Desai Mascot Logo">
+          <p>description</p>
+          <a href="#" class="game-button">Play Now</a>
+        </div>
 
-    </div>
+        <div class="game-card">
+          <h3>Comet Courier</h3>
+          <img src="images/sockjamcover.png" alt="Ohm Desai Mascot Logo">
+          <p>description</p>
+          <a href="#" class="game-button">Play Now</a>
+        </div>
+
+        <div class="game-card">
+          <h3>Game Title</h3>
+          <img src="images/sockjamcover.png" alt="Ohm Desai Mascot Logo">
+          <p>description pretend theres a long description here ahhhh! LINKS TO ITCH</p>
+          <a href="#" class="game-button">Play Now</a>
+        </div>
+      </section>
+
+    </div> <!-- end container -->
   </main>
 
-  <script>HTMLInclude();</script>
-</body>
+  <!-- Dynamically include footer -->
+  <div data-include="components/footer.html"></div>
 
+  <!-- Enable dynamic includes -->
+  <script>
+    HTMLInclude();
+  </script>
+
+</body>
 </html>

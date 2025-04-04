@@ -43,26 +43,6 @@
   text-align: center;
 }
 
-/* === Social Media Icons === */
-.homepage-socials {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  padding: 1.5rem 0;
-}
-
-.homepage-socials img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.homepage-socials img:hover {
-  transform: scale(1.1);
-}
-
 /* === Content + Posts === */
 .homepage-content {
   display: flex;

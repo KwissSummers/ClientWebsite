@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ohm Desai's Indie Game Hub | About</title>
 
-  <link rel="stylesheet" href="styles/universalStyle.css" />
-  <link rel="stylesheet" href="styles/aboutStyle.css" />
-
+  <link rel="stylesheet" href="styles/aboutStyle.css">
+  <link rel="stylesheet" href="styles/universalStyle.css">
   <script src="scripts/HTMLInclude.min.js"></script>
   <script src="scripts/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <main id="homepage-main">
-    <div class="homepage-container">
+    <div class="homepage-container"> <!-- added container -->
 
       <!-- Banner -->
       <section class="homepage-banner">
@@ -30,20 +33,68 @@
         </div>
       </section>
 
-      <!-- Navigation Tabs -->
+      <!-- Navigation -->
       <div data-include="components/header.html"></div>
 
-      <!-- Main Page Content -->
-      <main class="page-content">
-        <p>This is where the biography and background information will go.</p>
-      </main>
+      <!-- Social Links (same as homepage) -->
+      <section class="homepage-socials">
+        <a href="https://sock8416.itch.io/" target="_blank">
+          <img src="images/itchio-logo.png" alt="Itch.io">
+        </a>
+        <a href="https://discord.gg/24YcbmAass" target="_blank">
+          <img src="images/discord-logo.png" alt="Discord">
+        </a>
+        <a href="https://github.com/odesai840" target="_blank">
+          <img src="images/github-logo.png" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/sock.games/" target="_blank">
+          <img src="images/instagram-logo.png" alt="Instagram">
+        </a>
+        <a href="https://bsky.app/profile/sock8416.bsky.social" target="_blank">
+          <img src="images/bluesky-logo.png" alt="Bluesky">
+        </a>
+      </section>
 
-      <!-- Footer -->
-      <div data-include="components/footer.html"></div>
+      <!-- About Me Section with PFP -->
+      <section class="about-bio">
+        <div class="about-bio-header">
+          <img src="images/sockenginelogo.png" alt="Ohm Desai Portrait" class="about-pfp">
+          <div class="about-bio-text">
+            <h2>About Me</h2>
+            <p>
+              I'm Ohm Desai, the indie developer behind Sock Games. I love building games that are intimate, quirky, and emotionally resonant. My goal is to create thoughtful digital spaces—small games with big feelings.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    </div>
+      <!-- Q&A Section -->
+      <section class="about-facts">
+        <div class="about-box">
+          <h3>What inspired your work?</h3>
+          <p>Games like EarthBound, Outer Wilds, and small RPGMaker stories—anything heartfelt and offbeat.</p>
+        </div>
+
+        <div class="about-box">
+          <h3>Favorite games?</h3>
+          <p>Celeste, Hollow Knight, Undertale, and anything with a tight loop and strong personality.</p>
+        </div>
+
+        <div class="about-box">
+          <h3>Your creative process?</h3>
+          <p>Prototype → Theme → Polish. It usually starts with a mechanic and grows into something personal.</p>
+        </div>
+      </section>
+
+    </div> <!-- end container -->
   </main>
 
-  <script>HTMLInclude();</script>
+  <!-- Footer -->
+  <div data-include="components/footer.html"></div>
+
+  <script>
+    HTMLInclude();
+  </script>
+
 </body>
 </html>

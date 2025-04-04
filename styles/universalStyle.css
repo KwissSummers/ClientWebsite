@@ -160,7 +160,35 @@
     margin-top: 0.5rem;
   }
 
-  
-  
+  /* === Social Media Icons === */
+.homepage-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.homepage-socials img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.homepage-socials img:hover {
+  transform: scale(1.1);
+}
+
+.popup {
+  transition: opacity 0.3s ease;
+}
+
+.active-tab {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
   
   
