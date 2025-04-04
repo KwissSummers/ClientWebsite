@@ -136,12 +136,20 @@
   
   /* === Container Wrapper === */
   /* === Reusable Page Container === */
+  #homepage-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
   .homepage-container {
     min-width: 896px;
-    max-width: 896px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 2rem;
   }
+  
   
   /* === Homepage Title and Tagline === */
   .homepage-title {

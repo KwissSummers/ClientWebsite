@@ -1,20 +1,3 @@
-/* === PAGE-SPECIFIC STYLES === */
-.page-main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .page-banner {
-    text-align: center;
-  }
-  
-  .page-content {
-    background-color: #2e2e2e;
-    padding: 2rem;
-  }
-  
 /* === About Bio Section === */
 .about-bio {
   background-color: #2e2e2e;
