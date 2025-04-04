@@ -32,18 +32,19 @@ img {
 /* Title + Tagline */
 /* === Homepage Banner with Logo on Left === */
 .homepage-banner {
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
   background-color: #333;
   border-bottom: 2px solid #ffffff;
 }
 
-.banner-content {
+.banner-inline {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  max-width: 1000px;
 }
 
 .banner-logo {
@@ -52,18 +53,27 @@ img {
 }
 
 .banner-text {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Make title much larger */
 .homepage-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .homepage-tagline {
   font-size: 1.2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   opacity: 0.8;
 }
+
 
 
 /* === Heading font family and uppercase === */
