@@ -4,20 +4,18 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center; /* Changed from flex-start to center */
-  margin: 2rem auto; /* Added auto margins for horizontal centering */
-  width: 100%; /* Ensure it takes full width of container */
-  max-width: 960px; /* Match the container max-width */
+  margin-top: 2rem;
 }
   
 .game-card {
   background-color: #2e2e2e;
   padding: 1rem;
-  width: 300px; /* Fixed width instead of max-width */
+  width: 300px; /* Fixed width */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-radius: 8px; /* Added rounded corners for better aesthetics */
+  border-radius: 4px; /* Added for better aesthetics */
 }
 
 .game-card img {
@@ -37,9 +35,7 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
-  text-decoration: none; /* Added to ensure proper styling as links */
-  display: inline-block; /* Better handling of the button dimensions */
-  border-radius: 4px; /* Added rounded corners to match the design */
+  border-radius: 4px; /* Added for consistent design */
 }
 
 .game-button:hover {
