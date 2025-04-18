@@ -58,7 +58,8 @@
 
       <!-- Contact Form Layout -->
       <section class="contact-layout">
-        <form id="contact-form" class="contact-form" action="https://formsubmit.co/odesai840@gmail.com" method="POST">
+        <!-- Form now uses the data-formsubmit attribute instead of action -->
+        <form id="contact-form" class="contact-form" data-formsubmit="odesai840@gmail.com">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
 
@@ -68,14 +69,14 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
 
-          <!-- FormSubmit configuration -->
+          <!-- FormSubmit configuration hidden fields -->
           <input type="hidden" name="_subject" value="New contact message from Sock Games website">
           <input type="hidden" name="_captcha" value="false">
           
           <button type="submit">Send</button>
         </form>
 
-        <div id="contact-thanks" class="hidden" aria-live="polite">
+        <div id="contact-thanks">
           Thanks for sending me a message!
         </div>
         

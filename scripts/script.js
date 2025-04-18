@@ -16,32 +16,73 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Contact Form Validation & Submission
+// Contact Form Validation & AJAX Submission
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const popup = document.getElementById("contact-thanks");
 
-  form?.addEventListener("submit", function (e) {
-    // We don't prevent default anymore to allow the form to submit to FormSubmit
-    
-    const email = document.getElementById("email").value;
-    const emailPattern = /^[^@]+@[^@]+\.[^@]+$/;
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      
+      // Validate email format
+      const email = document.getElementById("email").value;
+      const emailPattern = /^[^@]+@[^@]+\.[^@]+$/;
 
-    if (!emailPattern.test(email)) {
-      e.preventDefault(); // Only prevent submission if validation fails
-      alert("Please enter a valid email address.");
-      return;
-    }
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      
+      // Disable the submit button and add loading indicator
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.classList.add('loading');
 
-    // Show the thank you message even though we're redirecting
-    // This will appear briefly before the form submits
-    popup.classList.add("show");
-    popup.setAttribute("aria-live", "polite");
-    popup.style.opacity = "1";
-    
-    // We don't reset the form or set a timeout to hide the popup
-    // as the page will be navigating away after form submission
-  });
+      // Create FormData object from the form
+      const formData = new FormData(form);
+      
+      // Submit the form using fetch API
+      fetch('https://formsubmit.co/ajax/odesai840@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Form submitted successfully
+        console.log('Form submitted successfully:', data);
+        form.reset();
+        
+        // Re-enable the submit button and remove loading indicator
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+        
+        // Show thank you message
+        popup.classList.add("show");
+        
+        // Hide thank you message after 4 seconds
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 4000);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was a problem sending your message. Please try again later.');
+        
+        // Re-enable the submit button and remove loading indicator
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+      });
+    });
+  }
 });
 
 // Smooth Scroll for Internal Anchors
@@ -64,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Updated function to fetch recent 3 devlogs
 function fetchRecentDevLogs() {
   fetch("devlog.html")
     .then(response => response.text())
@@ -73,9 +115,24 @@ function fetchRecentDevLogs() {
       const posts = doc.querySelectorAll(".devlog-post");
       const container = document.getElementById("recent-devlogs");
 
-      // Take the first 2 posts
+      // Clear any existing content in the container
+      if (container) {
+        // Keep the header if it exists
+        const header = container.querySelector("h3");
+        container.innerHTML = "";
+        if (header) {
+          container.appendChild(header);
+        } else {
+          // Add header if it doesn't exist
+          const newHeader = document.createElement("h3");
+          newHeader.textContent = "Recent Development Updates";
+          container.appendChild(newHeader);
+        }
+      }
+
+      // Take the first 3 posts (changed from 2 to 3)
       posts.forEach((post, i) => {
-        if (i > 1) return;
+        if (i > 2) return; // Changed from 1 to 2 to show 3 posts
 
         const id = post.id;
         const title = post.querySelector("h2")?.textContent.trim();
@@ -86,6 +143,7 @@ function fetchRecentDevLogs() {
         article.className = "homepage-post";
         article.innerHTML = `
           <h3><a href="devlog.html#${id}">${title}</a></h3>
+          <p class="post-date">${date}</p>
           <p>${excerpt}</p>
         `;
 

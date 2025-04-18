@@ -1,5 +1,4 @@
-  
-  /* === Contact Page Styles Only === */
+/* === Contact Page Styles Only === */
 
 .contact-layout {
   display: flex;
@@ -56,6 +55,13 @@
   transform: scale(1.05);
 }
 
+.contact-form button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Keep the existing popup styling for consistency */
 #contact-thanks {
   position: fixed;
   top: 50%;
@@ -79,3 +85,26 @@
   pointer-events: auto;
 }
 
+/* Add these utility classes for the form operation */
+.hidden {
+  display: none;
+}
+
+/* Loading indicator for form submission */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contact-form button.loading::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  border: 0.2em solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
