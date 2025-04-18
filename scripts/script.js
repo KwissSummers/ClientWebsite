@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Updated function to fetch recent 3 devlogs
+// Reverted back to showing only 2 devlogs
 function fetchRecentDevLogs() {
   fetch("devlog.html")
     .then(response => response.text())
@@ -130,9 +130,9 @@ function fetchRecentDevLogs() {
         }
       }
 
-      // Take the first 3 posts (changed from 2 to 3)
+      // Take the first 2 posts (reverted back from 3)
       posts.forEach((post, i) => {
-        if (i > 2) return; // Changed from 1 to 2 to show 3 posts
+        if (i > 1) return; // Show only 2 posts
 
         const id = post.id;
         const title = post.querySelector("h2")?.textContent.trim();
