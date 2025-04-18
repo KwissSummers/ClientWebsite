@@ -13,16 +13,16 @@
     <script src="scripts/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
     <main id="homepage-main">
-      <div class="homepage-container"> <!-- added container -->
+      <div class="homepage-container">
     
+        <!-- Banner Section -->
         <section class="homepage-banner">
           <div class="banner-inline">
             <img src="images/sockenginelogo.png" alt="Ohm Desai Mascot Logo" class="banner-logo">
@@ -33,61 +33,60 @@
           </div>
         </section>
           
-
         <!-- Dynamically include header -->
         <div data-include="components/header.html"></div>
     
         <!-- Grid Layout: Logo + Intro -->
         <section class="homepage-intro">
           <div class="homepage-logo">
-            <img src="images/socksquarelogo.png" alt="Ohm Desai Mascot Logo">
+            <img src="images/socksquarelogo.png" alt="Sock Games Studio Logo">
           </div>
           <div class="homepage-description">
-            Sock Games is an independent studio founded on the principle that great games come from innovative thinking and player-focused design.
-            We create experiences that challenge conventions while remaining accessible and engaging.
-            Our talented team combines technical expertise with creative vision to develop games that leave a lasting impression. 
-            At Sock Games, we're not just making games—we're crafting experiences that players will remember.
+            <p>
+              Sock Games is an independent studio founded on the principle that great games come from innovative thinking and player-focused design.
+              We create experiences that challenge conventions while remaining accessible and engaging.
+              Our talented team combines technical expertise with creative vision to develop games that leave a lasting impression. 
+              At Sock Games, we're not just making games—we're crafting experiences that players will remember.
+            </p>
           </div>
         </section>
     
         <!-- Social Links -->
         <section class="homepage-socials">
-          <a href="https://sock8416.itch.io/" target="_blank">
+          <a href="https://sock8416.itch.io/" target="_blank" aria-label="Itch.io Profile">
             <img src="images/itchio-logo.png" alt="Itch.io">
           </a>
-          <a href="https://discord.gg/24YcbmAass" target="_blank">
+          <a href="https://discord.gg/24YcbmAass" target="_blank" aria-label="Discord Server">
             <img src="images/discord-logo.png" alt="Discord">
           </a>
-          <a href="https://github.com/odesai840" target="_blank">
+          <a href="https://github.com/odesai840" target="_blank" aria-label="GitHub Profile">
             <img src="images/github-logo.png" alt="GitHub">
           </a>
-          <a href="https://www.instagram.com/sock.games/" target="_blank">
+          <a href="https://www.instagram.com/sock.games/" target="_blank" aria-label="Instagram Page">
             <img src="images/instagram-logo.png" alt="Instagram">
           </a>
-          <a href="https://bsky.app/profile/sock8416.bsky.social" target="_blank">
+          <a href="https://bsky.app/profile/sock8416.bsky.social" target="_blank" aria-label="Bluesky Profile">
             <img src="images/bluesky-logo.png" alt="Bluesky">
           </a>
         </section>
     
         <!-- Blog Preview + Customizable Panel -->
         <section class="homepage-content">
-          
           <div class="homepage-posts" id="recent-devlogs">
-            <!-- Devlog previews will be inserted here -->
+            <!-- Devlog previews will be inserted here by JavaScript -->
+            <h3>Recent Development Updates</h3>
           </div>
           
           <aside class="homepage-sidepanel">
-            Click on the devlog titles to read more about each update and follow our development journey.
-            Use the navigation bar above to explore our website and discover our games, development logs, and more about our studio.
-            Join our community on social media to stay connected and be the first to hear about new releases and updates!
-            <br>
+            <h3>Welcome!</h3>
+            <p>Click on the devlog titles to read more about each update and follow our development journey.</p>
+            <p>Use the navigation bar above to explore our website and discover our games, development logs, and more about our studio.</p>
+            <p>Join our community on social media to stay connected and be the first to hear about new releases and updates!</p>
           </aside>
         </section>
-    
       </div> <!-- end container -->
     </main>
     
-
     <!-- Dynamically include footer -->
     <div data-include="components/footer.html"></div>
 
@@ -95,7 +94,5 @@
     <script>
         HTMLInclude();
     </script>
-    
 </body>
-
 </html>

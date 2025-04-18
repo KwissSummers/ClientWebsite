@@ -31,7 +31,6 @@
   height: auto;
 }
 
-
 .homepage-description {
   flex: 2;
   background-color: #2e2e2e;
@@ -41,6 +40,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 0.95rem; /* Slightly smaller font */
+  line-height: 1.5;
 }
 
 /* === Content + Posts === */
@@ -61,13 +62,42 @@
   padding: 1rem;
 }
 
+.homepage-post h3 {
+  font-size: 1.5rem; /* Slightly smaller heading */
+  margin-bottom: 0.5rem;
+}
+
+.homepage-post p {
+  font-size: 0.95rem; /* Slightly smaller text */
+  line-height: 1.5;
+}
+
 .homepage-sidepanel {
   flex: 1;
   background-color: #2e2e2e;
   padding: 1rem;
   min-height: 210px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 0.9rem; /* Smaller text */
+  line-height: 1.4;
+}
+
+.homepage-sidepanel h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.homepage-sidepanel p {
+  margin-bottom: 0.75rem;
+}
+
+/* Additional style for devlog placeholder */
+.devlog-placeholder {
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 0.9rem;
 }
