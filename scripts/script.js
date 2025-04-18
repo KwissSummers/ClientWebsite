@@ -16,31 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Contact Form Validation & Popup
+// Contact Form Validation & Submission
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const popup = document.getElementById("contact-thanks");
 
   form?.addEventListener("submit", function (e) {
-    e.preventDefault();
-
+    // We don't prevent default anymore to allow the form to submit to FormSubmit
+    
     const email = document.getElementById("email").value;
     const emailPattern = /^[^@]+@[^@]+\.[^@]+$/;
 
     if (!emailPattern.test(email)) {
+      e.preventDefault(); // Only prevent submission if validation fails
       alert("Please enter a valid email address.");
       return;
     }
 
-    form.reset();
+    // Show the thank you message even though we're redirecting
+    // This will appear briefly before the form submits
     popup.classList.add("show");
     popup.setAttribute("aria-live", "polite");
     popup.style.opacity = "1";
-
-    setTimeout(() => {
-      popup.style.opacity = "0";
-      popup.classList.remove("show");
-    }, 4000);
+    
+    // We don't reset the form or set a timeout to hide the popup
+    // as the page will be navigating away after form submission
   });
 });
 

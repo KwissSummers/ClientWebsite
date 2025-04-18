@@ -1,33 +1,31 @@
-
-  /* === Games Gallery === */
-  .games-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: flex-start; /* changed from center */
-    margin-top: 2rem;
-  }
+/* === Games Gallery === */
+.games-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center; /* Changed from flex-start to center */
+  margin: 2rem auto; /* Added auto margins for horizontal centering */
+  width: 100%; /* Ensure it takes full width of container */
+  max-width: 960px; /* Match the container max-width */
+}
   
-
 .game-card {
   background-color: #2e2e2e;
   padding: 1rem;
-  max-width: 300px;
-  width: 100%;
+  width: 300px; /* Fixed width instead of max-width */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border-radius: 8px; /* Added rounded corners for better aesthetics */
 }
 
 .game-card img {
   width: 100%;
-  max-width: 300px;
   height: 200px;
   object-fit: cover;
   border-radius: 4px;
 }
-
 
 .game-button {
   margin-top: 1rem;
@@ -39,6 +37,9 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+  text-decoration: none; /* Added to ensure proper styling as links */
+  display: inline-block; /* Better handling of the button dimensions */
+  border-radius: 4px; /* Added rounded corners to match the design */
 }
 
 .game-button:hover {
